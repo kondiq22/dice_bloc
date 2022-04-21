@@ -1,3 +1,4 @@
+import 'package:dice_bloc/constants/dice_images.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -55,7 +56,10 @@ class _HomePageState extends State<HomePage> {
                         Colors.orangeAccent,
                       ],
                     ),
-                    border: Border.all(),
+                    border: Border.all(
+                      width: 3,
+                      color: Colors.redAccent.withOpacity(0.3),
+                    ),
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(50),
                         bottomRight: Radius.circular(50))),
@@ -63,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Center(
                       child: Text(
-                        'Welcome to the Dice!',
+                        'Welcome in the Dice!',
                         style: TextStyle(
                           fontSize: 36,
                           fontWeight: FontWeight.bold,
@@ -93,31 +97,92 @@ class _HomePageState extends State<HomePage> {
                     Column(
                       children: [
                         Text(
-                          'Your Dice:',
+                          'Your Wins:',
                           style: TextStyle(
-                              fontSize: 36, fontWeight: FontWeight.bold),
+                              fontSize: 32, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 10,
                         ),
-                        Image.asset('assets/images/u1.png',
+                        Text(
+                          '11',
+                          style: TextStyle(
+                              fontSize: 45, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Image.asset(diceImage['user']![1],
                             height: 120, width: 120),
                       ],
                     ),
-                    SizedBox(width: 40),
+                    SizedBox(width: 30),
                     Column(
                       children: [
                         Text(
-                          'Bot Dice:',
+                          'Bot Wins:',
                           style: TextStyle(
-                              fontSize: 36, fontWeight: FontWeight.bold),
+                              fontSize: 32, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 10,
                         ),
-                        Image.asset('assets/images/b2.png',
+                        Text(
+                          '00',
+                          style: TextStyle(
+                              fontSize: 45, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Image.asset(diceImage['bot']![5],
                             height: 120, width: 120),
                       ],
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(110),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      width: 170,
+                      height: 45,
+                      child: ElevatedButton(
+                        onPressed: () => print('Play'),
+                        child: Text('Start New Round'),
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.redAccent,
+                            side: BorderSide(
+                                color: Colors.orangeAccent, width: 2)),
+                      ),
+                    ),
+                    Padding(padding: EdgeInsets.all(5)),
+                    SizedBox(
+                      width: 170,
+                      height: 45,
+                      child: ElevatedButton(
+                        onPressed: () => print('Restart'),
+                        child: Text('Restart The Game'),
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.redAccent,
+                            side: BorderSide(
+                                color: Colors.orangeAccent, width: 2)),
+                      ),
+                    ),
+                    Padding(padding: EdgeInsets.all(5)),
+                    SizedBox(
+                      width: 170,
+                      height: 45,
+                      child: ElevatedButton(
+                        onPressed: () => print('History'),
+                        child: Text('Show Game History'),
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.redAccent,
+                            side: BorderSide(
+                                color: Colors.orangeAccent, width: 2)),
+                      ),
                     ),
                   ],
                 ),
