@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
+import '../../models/game.dart';
+
 part 'new_round_state.dart';
 
 class NewRoundCubit extends Cubit<NewRoundState> {
@@ -22,11 +24,6 @@ class NewRoundCubit extends Cubit<NewRoundState> {
       opponentDice,
       roundCounter,
     ));
-    if (roundCounter == 10) {
-      restartGame();
-    }
-
-    print('userDice: $userDice, opponentDice: $opponentDice');
   }
 
   void restartGame() {

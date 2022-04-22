@@ -1,3 +1,4 @@
+import 'package:dice_bloc/blocs/cubit/game_history_cubit.dart';
 import 'package:dice_bloc/blocs/cubit/new_round_cubit.dart';
 import 'package:dice_bloc/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -12,8 +13,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => NewRoundCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => NewRoundCubit(),
+        ),
+        BlocProvider(
+          create: (context) => GameHistoryCubit(),
+        ),
+      ],
       child: MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
