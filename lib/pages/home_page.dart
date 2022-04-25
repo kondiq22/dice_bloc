@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../blocs/cubit/game_history_cubit.dart';
 import '../blocs/cubit/new_round_cubit.dart';
+import '../blocs/cubit/win_counter_cubit.dart';
 import '../models/game.dart';
 import 'round_info_msg.dart';
 
@@ -27,6 +28,7 @@ class _HomePageState extends State<HomePage> {
             // TODO: implement listener
             if (state.roundCounter == 0) {
               BlocProvider.of<GameHistoryCubit>(context).restartGameHistory();
+              BlocProvider.of<WinCounterCubit>(context).restartGame();
             }
             if (state.roundCounter >
                 BlocProvider.of<GameHistoryCubit>(context)
@@ -37,6 +39,10 @@ class _HomePageState extends State<HomePage> {
                 state.userDice,
                 state.opponentDice,
                 state.roundCounter,
+              );
+              BlocProvider.of<WinCounterCubit>(context).addPoint(
+                state.userDice,
+                state.opponentDice,
               );
             }
           },
@@ -131,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                                   height: 10,
                                 ),
                                 Text(
-                                  '${state.userDice}',
+                                  '${BlocProvider.of<WinCounterCubit>(context).state.userWinCounter}',
                                   style: TextStyle(
                                       fontSize: 45,
                                       fontWeight: FontWeight.bold),
@@ -156,7 +162,7 @@ class _HomePageState extends State<HomePage> {
                                   height: 10,
                                 ),
                                 Text(
-                                  '${state.opponentDice}',
+                                  '${BlocProvider.of<WinCounterCubit>(context).state.opponentWinCounter}',
                                   style: TextStyle(
                                       fontSize: 45,
                                       fontWeight: FontWeight.bold),
