@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../blocs/cubit/game_history_cubit.dart';
 import '../blocs/cubit/new_round_cubit.dart';
 import '../models/game.dart';
+import 'round_info_msg.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -95,13 +96,8 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: [
                             Center(
-                              child: Text(
-                                'Welcome in the Dice!',
-                                style: TextStyle(
-                                  fontSize: 36,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                              child: roundInfoMsg(state.roundCounter,
+                                  state.userDice, state.opponentDice),
                             ),
                             SizedBox(height: 15),
                             Center(
@@ -213,10 +209,13 @@ class _HomePageState extends State<HomePage> {
                               width: 170,
                               height: 45,
                               child: ElevatedButton(
-                                onPressed: () => print(
+                                onPressed: () => {
+                                  print(
                                     BlocProvider.of<GameHistoryCubit>(context)
                                         .state
-                                        .roundHistory),
+                                        .roundHistory,
+                                  ),
+                                },
                                 child: Text('Show Game History'),
                                 style: ElevatedButton.styleFrom(
                                     primary: Colors.redAccent,

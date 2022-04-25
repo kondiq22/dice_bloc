@@ -6,6 +6,7 @@ class Game {
   int userScore;
   int opponentScore;
   int roundCounter;
+
   Game({
     this.userDice = 0,
     this.opponentDice = 0,
@@ -15,9 +16,11 @@ class Game {
   });
 }
 
-Map<int, List<int>> roundHistory = {
-  0: [
-    0,
-    0,
-  ]
-};
+class RoundHistory {
+  Map<int, List<int>> roundHistory = {
+    // 0: [
+    //   0,
+    //   0,
+    // ]
+  };
+}
