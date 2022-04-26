@@ -119,12 +119,12 @@ class HistoryDialog {
     return Text('error');
   }
 
-  Widget historyDrawer(op, us) {
+  Widget historyDrawer(user, opponent) {
     return SizedBox(
         width: 70,
         height: 25,
         child: (() {
-          if (op > us) {
+          if (opponent > user) {
             return Container(
                 padding: EdgeInsets.all(5),
                 decoration: const BoxDecoration(
@@ -139,7 +139,7 @@ class HistoryDialog {
                   ),
                 ));
           }
-          if (op < us) {
+          if (opponent < user) {
             return Container(
                 padding: EdgeInsets.all(5),
                 decoration: const BoxDecoration(
