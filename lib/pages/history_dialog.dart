@@ -158,44 +158,6 @@ class HistoryDialog {
                               ),
                           ],
                         ),
-
-                        // child: gameHistory.isEmpty
-                        //     ? ElevatedButton(
-                        //         onPressed: () {
-                        //           gameHistory.isEmpty
-                        //               ? null
-                        //               : context
-                        //                   .read<NewRoundCubit>()
-                        //                   .restartGame();
-                        //           Navigator.of(context).pop();
-                        //         },
-                        //         child: Text(
-                        //           'Resume The Game',
-                        //           style: TextStyle(color: Colors.white),
-                        //         ),
-                        //         style: ElevatedButton.styleFrom(
-                        //             primary: Colors.blue,
-                        //             side: BorderSide(
-                        //                 color: Colors.white, width: 1)),
-                        //       )
-                        //     : ElevatedButton(
-                        //         onPressed: () {
-                        //           gameHistory.isEmpty
-                        //               ? null
-                        //               : context
-                        //                   .read<NewRoundCubit>()
-                        //                   .restartGame();
-                        //           Navigator.of(context).pop();
-                        //         },
-                        //         child: Text(
-                        //           'Restart The Game',
-                        //           style: TextStyle(color: Colors.white),
-                        //         ),
-                        //         style: ElevatedButton.styleFrom(
-                        //             primary: Colors.redAccent,
-                        //             side: BorderSide(
-                        //                 color: Colors.white, width: 1)),
-                        //       ),
                       ),
                     ],
                   ),
