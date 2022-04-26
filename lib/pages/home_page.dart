@@ -6,6 +6,7 @@ import '../blocs/cubit/game_history_cubit.dart';
 import '../blocs/cubit/new_round_cubit.dart';
 import '../blocs/cubit/win_counter_cubit.dart';
 import '../models/game.dart';
+import 'history_dialog.dart';
 import 'round_info_msg.dart';
 
 class HomePage extends StatefulWidget {
@@ -60,7 +61,12 @@ class _HomePageState extends State<HomePage> {
                         AssetImage('assets/images/dicelogo.png'),
                         size: 40,
                       ),
-                      onPressed: () => print('Game History'),
+                      onPressed: () => HistoryDialog().showRoundHistory(
+                        context,
+                        BlocProvider.of<GameHistoryCubit>(context)
+                            .state
+                            .roundHistory,
+                      ),
                     ),
                   )
                 ],
@@ -216,7 +222,8 @@ class _HomePageState extends State<HomePage> {
                               height: 45,
                               child: ElevatedButton(
                                 onPressed: () => {
-                                  print(
+                                  HistoryDialog().showRoundHistory(
+                                    context,
                                     BlocProvider.of<GameHistoryCubit>(context)
                                         .state
                                         .roundHistory,
