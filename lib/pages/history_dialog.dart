@@ -25,7 +25,7 @@ class HistoryDialog {
                           Padding(padding: EdgeInsets.all(4)),
                           Text(
                             'Round History: ',
-                            style: TextStyle(color: Colors.white, fontSize: 30),
+                            style: TextStyle(color: Colors.white, fontSize: 26),
                           ),
                           ImageIcon(
                             AssetImage('assets/images/dicelogo.png'),

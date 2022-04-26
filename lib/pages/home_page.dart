@@ -8,7 +8,6 @@ import '../blocs/cubit/win_counter_cubit.dart';
 import 'history_dialog.dart';
 import 'round_info_msg.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -139,7 +138,7 @@ class _HomePageState extends State<HomePage> {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 5,
                                 ),
                                 Text(
                                   '${BlocProvider.of<WinCounterCubit>(context).state.userWinCounter}',
@@ -148,13 +147,13 @@ class _HomePageState extends State<HomePage> {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 5,
                                 ),
                                 Image.asset(diceImage['user']![state.userDice],
                                     height: 120, width: 120),
                               ],
                             ),
-                            SizedBox(width: 30),
+                            SizedBox(width: 25),
                             Column(
                               children: [
                                 Text(
@@ -164,7 +163,7 @@ class _HomePageState extends State<HomePage> {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 5,
                                 ),
                                 Text(
                                   '${BlocProvider.of<WinCounterCubit>(context).state.opponentWinCounter}',
@@ -173,7 +172,7 @@ class _HomePageState extends State<HomePage> {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 5,
                                 ),
                                 Image.asset(
                                     diceImage['bot']![state.opponentDice],
@@ -184,65 +183,74 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            isAntiAlias: true,
-                            image: AssetImage('assets/images/diceimage.png'),
-                            fit: BoxFit.cover,
+                      SizedBox(
+                        height: 400,
+                        width: double.infinity,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              isAntiAlias: true,
+                              alignment: Alignment.center,
+                              image: AssetImage('assets/images/diceimage.png'),
+                              fit: BoxFit.fitWidth,
+                            ),
                           ),
-                        ),
-                        padding: EdgeInsets.all(110),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              width: 170,
-                              height: 45,
-                              child: ElevatedButton(
-                                onPressed:
-                                    context.read<NewRoundCubit>().newRoundRoll,
-                                child: Text('Start New Round'),
-                                style: ElevatedButton.styleFrom(
-                                    primary: Colors.redAccent,
-                                    side: BorderSide(
-                                        color: Colors.orangeAccent, width: 2)),
+                          padding: EdgeInsets.all(100),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                width: 185,
+                                height: 45,
+                                child: ElevatedButton(
+                                  onPressed: context
+                                      .read<NewRoundCubit>()
+                                      .newRoundRoll,
+                                  child: Text('Start New Round'),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.redAccent,
+                                      side: BorderSide(
+                                          color: Colors.orangeAccent,
+                                          width: 2)),
+                                ),
                               ),
-                            ),
-                            Padding(padding: EdgeInsets.all(5)),
-                            SizedBox(
-                              width: 170,
-                              height: 45,
-                              child: ElevatedButton(
-                                onPressed:
-                                    context.read<NewRoundCubit>().restartGame,
-                                child: Text('Restart The Game'),
-                                style: ElevatedButton.styleFrom(
-                                    primary: Colors.redAccent,
-                                    side: BorderSide(
-                                        color: Colors.orangeAccent, width: 2)),
+                              Padding(padding: EdgeInsets.all(5)),
+                              SizedBox(
+                                width: 185,
+                                height: 45,
+                                child: ElevatedButton(
+                                  onPressed:
+                                      context.read<NewRoundCubit>().restartGame,
+                                  child: Text('Restart The Game'),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.redAccent,
+                                      side: BorderSide(
+                                          color: Colors.orangeAccent,
+                                          width: 2)),
+                                ),
                               ),
-                            ),
-                            Padding(padding: EdgeInsets.all(5)),
-                            SizedBox(
-                              width: 170,
-                              height: 45,
-                              child: ElevatedButton(
-                                onPressed: () => {
-                                  HistoryDialog().showRoundHistory(
-                                    context,
-                                    BlocProvider.of<GameHistoryCubit>(context)
-                                        .state
-                                        .roundHistory,
-                                  ),
-                                },
-                                child: Text('Show Game History'),
-                                style: ElevatedButton.styleFrom(
-                                    primary: Colors.redAccent,
-                                    side: BorderSide(
-                                        color: Colors.orangeAccent, width: 2)),
+                              Padding(padding: EdgeInsets.all(5)),
+                              SizedBox(
+                                width: 185,
+                                height: 45,
+                                child: ElevatedButton(
+                                  onPressed: () => {
+                                    HistoryDialog().showRoundHistory(
+                                      context,
+                                      BlocProvider.of<GameHistoryCubit>(context)
+                                          .state
+                                          .roundHistory,
+                                    ),
+                                  },
+                                  child: Text('Show Game History'),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.redAccent,
+                                      side: BorderSide(
+                                          color: Colors.orangeAccent,
+                                          width: 2)),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       )
                     ],
