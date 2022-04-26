@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../blocs/cubit/game_history_cubit.dart';
 import '../blocs/cubit/new_round_cubit.dart';
 import '../blocs/cubit/win_counter_cubit.dart';
-import '../models/game.dart';
 import 'history_dialog.dart';
 import 'round_info_msg.dart';
 
@@ -186,6 +185,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            isAntiAlias: true,
+                            image: AssetImage('assets/images/diceimage.png'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
                         padding: EdgeInsets.all(110),
                         child: Column(
                           children: [
