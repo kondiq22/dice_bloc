@@ -8,6 +8,7 @@ import '../blocs/cubit/win_counter_cubit.dart';
 import 'history_dialog.dart';
 import 'round_info_msg.dart';
 
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -25,7 +26,6 @@ class _HomePageState extends State<HomePage> {
       builder: (context, state) {
         return BlocConsumer<NewRoundCubit, NewRoundState>(
           listener: (context, state) {
-            // TODO: implement listener
             if (state.roundCounter == 0) {
               BlocProvider.of<GameHistoryCubit>(context).restartGameHistory();
               BlocProvider.of<WinCounterCubit>(context).restartGame();

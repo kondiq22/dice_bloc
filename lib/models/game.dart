@@ -1,5 +1,3 @@
-import 'dart:math';
-
 class Game {
   int userDice;
   int opponentDice;

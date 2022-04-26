@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:dice_bloc/models/game.dart';
 import 'package:equatable/equatable.dart';
 
 part 'game_history_state.dart';
