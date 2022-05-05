@@ -15,6 +15,7 @@ For state management I use BloC(Cubits).
 ![game_progress2](https://user-images.githubusercontent.com/61063578/166932950-d50ca0d7-9a83-443c-8eca-d0429ae1d0bf.png)
 ![game_history_empty](https://user-images.githubusercontent.com/61063578/166932973-629e509c-7b9f-4ec3-82d4-cda9f0cb1b9e.png)
 ![game_history](https://user-images.githubusercontent.com/61063578/166932987-47587e8d-5c8a-4a6e-bc5d-f587d71ea8c0.png)
-https://user-images.githubusercontent.com/61063578/166934510-03f08370-6c3b-4345-85aa-d4d9d629c528.mp4
+![game_demo](https://user-images.githubusercontent.com/61063578/166934510-03f08370-6c3b-4345-85aa-d4d9d629c528.mp4)
+
 
 
