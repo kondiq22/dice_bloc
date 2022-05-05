@@ -12,7 +12,7 @@ For state management I use BloC(Cubits).
 
 ## App Presentation:
 
-![Video Preview](https://user-images.githubusercontent.com/61063578/166934510-03f08370-6c3b-4345-85aa-d4d9d629c528.mp4)
+[Video Preview](https://user-images.githubusercontent.com/61063578/166934510-03f08370-6c3b-4345-85aa-d4d9d629c528.mp4)
 
 ![game_start](https://user-images.githubusercontent.com/61063578/166932902-32699820-f356-4d84-b018-2374c4882e67.png)
 ![game_progress](https://user-images.githubusercontent.com/61063578/166932926-cf86cb0e-0f09-4769-b748-2f492deab084.png)
