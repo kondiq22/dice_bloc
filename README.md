@@ -10,7 +10,11 @@ You decide when and with what result your duel will end.
 
 For state management I use BloC(Cubits).
 
-![Android Emulator - Pixel_4_API_32_5554 05 05 2022 14_19_14](https://user-images.githubusercontent.com/61063578/166921950-415b0d2f-4e8e-44e6-99d7-1f4b60d4ba3b.png)
-![Android Emulator - Pixel_4_API_32_5554 05 05 2022 14_20_16](https://user-images.githubusercontent.com/61063578/166922242-4585a8d5-8470-4f2f-b266-301d4dc9a38d.png)
-![Android Emulator - Pixel_4_API_32_5554 05 05 2022 14_20_54](https://user-images.githubusercontent.com/61063578/166922245-cb6b686b-cd7f-48b4-acea-164660d290d3.png)
-![Android Emulator - Pixel_4_API_32_5554 05 05 2022 14_21_12](https://user-images.githubusercontent.com/61063578/166922256-48653e91-ef55-46db-9816-96cba2a3ea8c.png)
+![game_start](https://user-images.githubusercontent.com/61063578/166932902-32699820-f356-4d84-b018-2374c4882e67.png)
+![game_progress](https://user-images.githubusercontent.com/61063578/166932926-cf86cb0e-0f09-4769-b748-2f492deab084.png)
+![game_progress2](https://user-images.githubusercontent.com/61063578/166932950-d50ca0d7-9a83-443c-8eca-d0429ae1d0bf.png)
+![game_history_empty](https://user-images.githubusercontent.com/61063578/166932973-629e509c-7b9f-4ec3-82d4-cda9f0cb1b9e.png)
+![game_history](https://user-images.githubusercontent.com/61063578/166932987-47587e8d-5c8a-4a6e-bc5d-f587d71ea8c0.png)
+https://user-images.githubusercontent.com/61063578/166934510-03f08370-6c3b-4345-85aa-d4d9d629c528.mp4
+
+
